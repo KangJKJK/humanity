@@ -61,10 +61,8 @@ case $choice in
 
     echo -e "${GREEN}개인키 정보가 private_keys.txt파일에 저장되었습니다.${NC}"
 
-    echo -e "${GREEN}해당 사이트에 가입을 진행해주세요: https://testnet.humanity.org/login?ref=kangjk1/${NC}"
+    echo -e "${GREEN}해당 사이트에 가입을 진행해주세요: https://testnet.humanity.org/login?ref=kangjk/${NC}"
     read -p "가입을 하셨다면 엔터를 눌러주세요.: "
-    echo -e "${GREEN}해당 사이트에서 Faucet을 받아주세요: https://faucet.testnet.humanity.org/${NC}"
-    read -p "Faucet을 받으셨으면 엔터를 눌러주세요.: "
 
     # 봇 구동
     python3 bot.py
