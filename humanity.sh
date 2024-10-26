@@ -35,7 +35,7 @@ case $choice in
         rm -rf "$WORK"
     fi
 
-    # GitHub에서 코드 복사
+    # GitHub에서 코드 복���
     echo -e "${YELLOW}GitHub에서 코드 복사 중...${NC}"
     git clone https://github.com/airdropinsiders/HumanityTestnet-Bot.git
     cd "$WORK"
@@ -54,16 +54,9 @@ case $choice in
 
     # private_keys.txt 파일 생성 및 초기화
     {     
-        echo "["
-        for i in "${!keys_array[@]}"; do
-            if [ $i -eq $((${#keys_array[@]} - 1)) ]; then
-                echo "  \"${keys_array[i]}\""
-            else
-                echo "  \"${keys_array[i]}\","
-            fi
+        for i in "${keys_array[@]}"; do
+            echo "${keys_array[i]}"
         done
-
-        echo "]"
     } > "$WORK/private_keys.txt"
 
     echo -e "${GREEN}개인키 정보가 private_keys.txt파일에 저장되었습니다.${NC}"
